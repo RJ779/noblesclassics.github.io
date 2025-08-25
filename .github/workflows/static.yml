@@ -22,9 +22,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          lfs: true
+        uses: actions/checkout@v4   # <-- no lfs:true
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
